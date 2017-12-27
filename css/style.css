@@ -1,5 +1,42 @@
 /* -------------------------------- 
 
+Animations
+
+-------------------------------- */
+@-webkit-keyframes dboxRainbow {
+  0% {
+    background-position: 0% 50%; }
+  50% {
+    background-position: 100% 50%; }
+  100% {
+    background-position: 0% 50%; } }
+
+@-moz-keyframes dboxRainbow {
+  0% {
+    background-position: 0% 50%; }
+  50% {
+    background-position: 100% 50%; }
+  100% {
+    background-position: 0% 50%; } }
+
+@-o-keyframes dboxRainbow {
+  0% {
+    background-position: 0% 50%; }
+  50% {
+    background-position: 100% 50%; }
+  100% {
+    background-position: 0% 50%; } }
+
+@keyframes dboxRainbow {
+  0% {
+    background-position: 0% 50%; }
+  50% {
+    background-position: 100% 50%; }
+  100% {
+    background-position: 0% 50%; } }
+
+/* -------------------------------- 
+
 Primary style
 
 -------------------------------- */
@@ -40,38 +77,6 @@ Modules - reusable parts of our design
   text-indent: 100%;
   white-space: nowrap; }
 
-@-webkit-keyframes dboxRainbow {
-  0% {
-    background-position: 0% 50%; }
-  50% {
-    background-position: 100% 50%; }
-  100% {
-    background-position: 0% 50%; } }
-
-@-moz-keyframes dboxRainbow {
-  0% {
-    background-position: 0% 50%; }
-  50% {
-    background-position: 100% 50%; }
-  100% {
-    background-position: 0% 50%; } }
-
-@-o-keyframes dboxRainbow {
-  0% {
-    background-position: 0% 50%; }
-  50% {
-    background-position: 100% 50%; }
-  100% {
-    background-position: 0% 50%; } }
-
-@keyframes dboxRainbow {
-  0% {
-    background-position: 0% 50%; }
-  50% {
-    background-position: 100% 50%; }
-  100% {
-    background-position: 0% 50%; } }
-
 .cd-header {
   /* replace text with a background-image */
   display: block;
@@ -91,6 +96,11 @@ Modules - reusable parts of our design
   display: block;
   overflow: hidden;
   text-indent: 100%; }
+
+.home-content {
+  font-weight: 300;
+  line-height: 3rem;
+  color: #fff; }
 
 /* -------------------------------- 
 
@@ -138,12 +148,19 @@ Main components
     .cd-section:nth-of-type(6) p {
       color: #898099; }
   .cd-section h1, .cd-section p {
-    width: 80%;
-    max-width: 62.5rem;
     position: absolute;
+    left: 50%;
     top: 50%;
-    left: 10%;
-    transform: translateY(-50%); }
+    bottom: auto;
+    right: auto;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -o-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    width: 90%;
+    max-width: 768px;
+    text-align: left; }
   .cd-section h1 {
     color: #fff;
     font-weight: 300;
@@ -152,9 +169,8 @@ Main components
     font-size: 1.875rem; }
   .cd-section p {
     font-weight: 300;
-    text-transform: uppercase;
-    font-size: 24px;
-    font-size: 1.5rem;
+    font-size: 30px;
+    font-size: 1.875rem;
     line-height: 1.6; }
   @media only screen and (min-width: 768px) {
     .cd-section h1 {
